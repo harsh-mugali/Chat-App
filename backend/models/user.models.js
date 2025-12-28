@@ -23,8 +23,10 @@ const userSchema = new mongoose.Schema({
     profilePicture: {
         type: String,
         default: "",
-    },
-});
+    }, 
+},
+//createdAt And UpdatedAt
+{timestamps: true});
 
 const User = mongoose.model('User', userSchema);
 
