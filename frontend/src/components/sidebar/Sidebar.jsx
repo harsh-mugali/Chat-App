@@ -6,13 +6,17 @@ import LogoutButton from './LogoutButton'
 
 const Sidebar = () => {
   return (
-    <div>
-        <SearchInput/>
-        <div className='divider px-3'></div>
-        <Conversations/>
-        <LogoutButton/>
-    </div>
-  )
-}
+    <div className="flex flex-col h-full border-r border-white/20">
+      <SearchInput />
 
-export default Sidebar
+      <div className="divider px-3"></div>
+
+      <div className="flex-1 overflow-y-auto px-1">
+        <Conversations />
+      </div>
+
+      <LogoutButton />
+    </div>
+  );
+};
+export default Sidebar;
